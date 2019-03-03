@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+/*Размер текста нужно поменять под ширину экрана*/
+body {
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+    color: black;
+    height: 100%;
+}
+/*размеры хэда завитят от ширины экрана*/
+/*Этот хэдер только для главной страницы*/
+#header_main_page {
+    width: 100%;
+    height: 900px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+/*Хэдер для других страниц*/
+header {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+.layer-top{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(145, 140, 140, 0.5);
+    z-index: 1;
+}
+
+#nav_main_page, nav {
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background: grey;
+    opacity: 0.5;
+}
+
+nav {
+    background: rgba(145, 140, 140,0.5);
+    opacity: 1;
+
+}
+
+#nav_main_page:hover {
+    transition: 1s;
+    opacity: 1;
+}
+
+nav:hover{
+    transition: 1s;
+    background: grey;
+}
+
+.menu_row {
+    font-size: 1.5em;
+    display: block;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/*стили для меню открываемое с телефона*/
+.menu_for_phone {
+    font-size: 3em;
+    display: none;
+}
+.modal_win_menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-size: 2em;
+    top: 0px;
+    left: 0px;
+    background: rgba(145, 140, 140, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.modal_win_menu a {
+    margin: 2%;
+}
+.close_mod_win {
+    margin: 3%;
+    padding: 1%;
+    background: grey;
+    color: white;
+}
+/*размеры подложки зависят от ширины экрана*/
+.background_for_header {
+    width: 100%;
+    height: 100%;
+    max-height: 1000px;
+    min-height: 300px;
+    background: url("../img/mainBackgroundImage.jpg");
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    display: flex;
+    padding: auto;
+
+}
+.text_for_header {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 4em;
+    color: black;
+    padding-bottom: 10%;
+    z-index: 2;
+}
+
+section {
+    width: 100%;
+    /*Перепроверить высоту*/
+    min-height: 500px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px black;
+    position: relative;
+    background: white;
+    z-index: 2;
+
+}
+/*Блоки внизу*/
+.about_disainer, .services  {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 2px solid grey;
+}
+
+.foto_by_disainer {
+    padding: 2%;
+    display: block;
+    width: 40%;
+    text-align: center;
+}
+.icon_for_service {
+    padding: 2%;
+    display: block;
+    width: 20%;
+    text-align: center;
+}
+
+/*Нужно будет переделать*/
+img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.text_about_disainer {
+    text-align: justify;
+    padding: 2%;
+    display: block;
+    width: 60%;
+}
+.text_about_service {
+    text-align: justify;
+    padding: 2%;
+    display: block;
+    width: 80%;
+}
+
+.services {
+    flex-direction: column;
+}
+.services img {
+    width: 50%;
+}
+.elementRow {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*Далее идут стили для портфолио*/
+.conteiner_for_album {
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.album, .foto_portfolio {
+    margin: 2.5% 5% 2.5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    max-width: 40%;
+    z-index: 2;
+}
+
+.preview_album {
+    text-align: justify;
+    align-items: center;
+}
+.preview_album :hover {
+    transition: 1s;
+    filter: brightness(80%);
+}
+
+.preview_album img {
+    border: 2px solid grey;
+}
+
+.name_album {
+    text-align: center;
+    margin: 5px;
+}
+/*Далее идут стили для страницы с альбомом*/
+aside {
+    margin: 2% 2% 0% 2%;
+    font-size: 1.2em;
+    text-align: justify;
+}
+.foto_portfolio img {
+    border: 2px solid grey;
+}
+
+.background_for_foto {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    font-size: 3em;
+    /*top: 0px;*/
+    /*left: 0px;*/
+    background: rgba(145, 140, 140, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
+.max_foto {
+    display: block;
+    margin: auto;
+    /*justify-content: space-between;*/
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 5;
+}
+
+.max_foto img {
+    max-height: 100%;
+
+}
+
+.turn_back, .turn_forward {
+    display: block;
+    width: 10%;
+    text-align: center;
+    z-index: 5;
+}
+
+/*Далее идут стили для страницы услуг*/
+table {
+    margin: 2%;
+    border: 1px;
+    padding: 20px;
+}
+
+td {
+    text-align: justify;
+    padding: 10px;
+ }
+
+.td_service {
+    width: 20%;
+    text-align: center;
+}
+
+.td_cost {
+    width: 10%;
+    text-align: center;
+}
+
+/*Ниже для стили для страницы контакты*/
+.contact {
+    display: inline-block;
+    margin: 2% 2% 0% 2%;
+}
+.map {
+    margin: 2% 2% 2% 2%;
+}
+
+footer {
+    background-color: rgba(145, 140, 140);
+    position: relative;
+    width: 100%;
+    /*height: 100px;*/
+    z-index: 2;
+}
+.social_net {
+    justify-content: left;
+    word-spacing: 20px;
+    padding: 10px;
+    font-size: 2em;
+}
+.general_iformation {
+    text-align: center;
+    padding: 10px;
+}
+@media (max-width: 1800px){
+body {
+    font-size: 12px;
+}
+    .menu_row {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #header_main_page {
+        height: 800px;
+    }
+    header {
+        height: 300px;
+    }
+    .max_foto {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        /*margin-bottom: 10%;*/
+        /*width: 60%;*/
+        /*height: 80%;*/
+        /*max-width: 60%;*/
+        /*max-height: 80%;*/
+    }
+    .max_foto img {
+        max-width: 900px;
+        max-height: 600px;
+        /*max-height: 60%;*/
+    }
+    .turn_back, .turn_forward {
+        /*display: block;*/
+        /*max-width: 20%;*/
+        text-align: center;
+        z-index: 5;
+    }
+
+}
+
+@media (max-width: 1400px) {
+    body {
+        font-size: 10px;
+    }
+    .menu_row {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    img {
+        max-height: 400px;
+    }
+    #header_main_page {
+        height: 600px;
+    }
+    header {
+        height: 200px;
+    }
+    .max_foto {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        /*margin-bottom: 10%;*/
+        /*width: 60%;*/
+        /*height: 80%;*/
+        /*max-width: 60%;*/
+        /*max-height: 80%;*/
+    }
+    .max_foto img {
+       max-width: 900px;
+        max-height: 600px;
+        /*max-height: 60%;*/
+    }
+    .turn_back, .turn_forward {
+        /*display: block;*/
+        /*max-width: 20%;*/
+        text-align: center;
+        z-index: 5;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    body {
+        font-size: 10px;
+    }
+    .menu_row {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    #header_main_page {
+        height: 500px;
+    }
+    header {
+        height: 200px;
+    }
+    .background_for_header {
+        height: 100%;
+        max-height: 1000px;
+        min-height: 300px;
+    }
+    .text_for_header {}
+    section {
+        min-height: 700px;
+    }
+    .elementRow {
+        flex-direction: column;
+    }
+    /*.max_foto {*/
+        /*display: flex;*/
+        /*justify-content: space-between;*/
+        /*max-width: 80%;*/
+        /*max-height: 80%;*/
+    /*}*/
+
+}
+@media (max-width: 810px) {
+    #header_main_page {
+        height: 500px;
+    }
+    header {
+        height: 300px;
+    }
+    .background_for_header {
+        height: 70%;
+        max-height: 1000px;
+        min-height: 300px;
+    }
+
+    section {
+        min-height: 700px;
+    }
+}
+/*перепроверить дублирующие селекторы*/
+@media (max-width: 740px) {
+    body {
+        font-size: 8px;
+    }
+    #header_main_page {
+        height: 250px;
+    }
+    header {
+        height: 200px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #nav_main_page, nav {
+        justify-content: right;
+
+    }
+    .menu_row {
+        display: none;
+    }
+    .menu_for_phone {
+        display: block;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .about_disainer {
+        flex-direction: column;
+    }
+    .foto_by_disainer  {
+        width: 80%;
+    }
+    .conteiner_for_album {
+        flex-direction: column;
+    }
+    .album {
+        max-width: 90%;
+    }
+    .foto_portfolio {
+        max-width: 90%;
+    }
+    section {
+        min-height: 400px;
+    }
+}
+@media (max-width: 450px) {
+    body {
+        font-size: 8px;
+    }
+    #header_main_page {
+        height: 300px;
+    }
+    header {
+        height: 250px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .background_for_header {
+        height: 50%;
+        max-height: 1000px;
+        min-height: 300px;
+    }
+    #nav_main_page, nav {
+        justify-content: right;
+
+    }
+    .menu_row {
+        display: none;
+    }
+    .menu_for_phone {
+        display: block;
+        padding-right: 5%;
+    }
+    .about_disainer {
+        flex-direction: column;
+    }
+    .foto_by_disainer  {
+        width: 80%;
+    }
+    .conteiner_for_album {
+        flex-direction: column;
+    }
+    .album {
+        max-width: 90%;
+    }
+    .foto_portfolio {
+        max-width: 90%;
+    }
+    section {
+        min-height: 400px;
+    }
+}
+@media (max-width: 400px) {
+    body {
+        font-size: 6px;
+    }
+    #header_main_page {
+        height: 250px;
+    }
+    header {
+        height: 250px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .background_for_header {
+        height: 50%;
+        max-height: 1000px;
+        min-height: 300px;
+    }
+    /*.text_for_header {*/
+        /*height: 200px;*/
+    /*}*/
+}
