@@ -11,12 +11,11 @@
     <title>Portfolio</title>
 </head>
 <body>
+
 <header>
-
     <div class="text_for_header">
-        <a href="/main"><h1>design for the soul</h1></a>
+        <a href="index.html"><h1>design for the soul</h1></a>
     </div>
-
 </header>
 <nav>
     <div class="menu_row">
@@ -42,39 +41,36 @@
     <a href="/contacts">CONTACTS</a>
     <div class="close_mod_win">CLOSE</div>
 </div>
+<aside>
+    <div class="name_album">
+        <h2>New home</h2>
+    </div>
+    <div class="description_album">
+        Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+    </div>
+</aside>
 <section>
     <div class="conteiner_for_album">
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/desert.jpg"> </a>
-            </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
-            </div>
+        <div class="foto_portfolio">
+            <img src="img/desert.jpg">
         </div>
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/mainBackgroundImage.jpg"> </a>
-            </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
-            </div>
+        <div class="foto_portfolio">
+            <img src="img/mainBackgroundImage.jpg">
         </div>
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/desert.jpg"> </a>
-            </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
-            </div>
+        <div class="foto_portfolio">
+            <img src="img/desert.jpg">
         </div>
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/mainBackgroundImage.jpg"> </a>
-            </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
-            </div>
+        <div class="foto_portfolio">
+            <img src="img/mainBackgroundImage.jpg">
+        </div>
+        <div class="foto_portfolio">
+            <img src="img/Hydrangeas.jpg">
+        </div>
+        <div class="foto_portfolio">
+            <img src="img/Lighthouse.jpg">
+        </div>
+        <div class="foto_portfolio">
+            <img src="img/Penguins.jpg">
         </div>
     </div>
 </section>
