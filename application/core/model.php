@@ -8,6 +8,10 @@
 
 class Model
 {
+    public function get_user_db()
+    {
+
+    }
     public function get_data()
     {
 

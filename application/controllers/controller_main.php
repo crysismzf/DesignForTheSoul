@@ -6,7 +6,7 @@
  * Time: 16:01
  */
 
-class Controller_Main extends Controller
+class Controller_main extends Controller
 {
     function action_index()
     {

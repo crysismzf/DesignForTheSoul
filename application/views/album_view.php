@@ -14,7 +14,7 @@
 
 <header>
     <div class="text_for_header">
-        <a href="index.html"><h1>design for the soul</h1></a>
+        <a href="/main"><h1>design for the soul</h1></a>
     </div>
 </header>
 <nav>

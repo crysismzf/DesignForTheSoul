@@ -80,10 +80,10 @@
 </section>
 <footer>
     <div class = "social_net">
-        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="<?php foreach($user_db as $row) {echo $row['twitter'];} ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="<?php foreach($user_db as $row) {echo $row['vk'];} ?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="<?php foreach($user_db as $row) {echo $row['instagram'];} ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="<?php foreach($user_db as $row) {echo $row['facebook'];} ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
     </div>
     <div class="general_iformation">
         &#169 design for the soul

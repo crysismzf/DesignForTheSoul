@@ -8,8 +8,9 @@
 
 class View
 {
-    function generate($content_view, $data=null)
+    function generate($content_view, $user_db=null,$data=null)
     {
+
         include 'application/views/'.$content_view;
     }
 }
