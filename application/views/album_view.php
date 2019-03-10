@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <script src="js/jq.js"></script>
+    <script src="../../js/jq.js"></script>
     <title>Portfolio</title>
 </head>
 <body>
@@ -43,48 +43,35 @@
 </div>
 <aside>
     <div class="name_album">
-        <h2>New home</h2>
+        <h2><?php echo $data[0]['name']; ?></h2>
     </div>
     <div class="description_album">
-        Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+            <?php echo $data[0]['description']; ?>
     </div>
 </aside>
 <section>
-    <div class="conteiner_for_album">
-        <div class="foto_portfolio">
-            <img src="img/desert.jpg">
-        </div>
-        <div class="foto_portfolio">
-            <img src="img/mainBackgroundImage.jpg">
-        </div>
-        <div class="foto_portfolio">
-            <img src="img/desert.jpg">
-        </div>
-        <div class="foto_portfolio">
-            <img src="img/mainBackgroundImage.jpg">
-        </div>
-        <div class="foto_portfolio">
-            <img src="img/Hydrangeas.jpg">
-        </div>
-        <div class="foto_portfolio">
-            <img src="img/Lighthouse.jpg">
-        </div>
-        <div class="foto_portfolio">
-            <img src="img/Penguins.jpg">
-        </div>
+    <div class="conteiner_for_album"><?php
+        $i = 1;
+        foreach ($data as $row) {
+            echo "<div class=\"foto_portfolio\">
+            <img src=\"../../img/portfolio/".$row['id_album']."/".$i.".".$row['extension']."\">
+             </div>";
+            $i=++$i;
+        }
+        ?>
     </div>
 </section>
 <footer>
     <div class = "social_net">
-        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
     </div>
     <div class="general_iformation">
         &#169 design for the soul
     </div>
 </footer>
-<script src="js/starter.js"></script>
+<script src="../../js/starter.js"></script>
 </body>
 </html>

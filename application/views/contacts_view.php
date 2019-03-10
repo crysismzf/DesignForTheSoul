@@ -47,31 +47,31 @@
     <div class="elementRow">
     <div class="contact">
         <i class="fa fa-location-arrow" aria-hidden="true"></i>
-        <span class="address"> 19928, New York, Madness st., 22</span><br><br>
+        <span class="address"> <?php echo $user_db[0]['address'];?> </span><br><br>
         <i class="fa fa-phone" aria-hidden="true"></i>
-        <span class="tel">8-899-111-11-11</span><br><br>
+        <span class="tel"><?php echo $user_db[0]['phone'];?></span><br><br>
         <i class="fa fa-envelope" aria-hidden="true"></i>
-        <span class="email">mail@email.com</span><br><br>
-        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i>
-        <span class="twitter">twitter.com</span></a><br><br>
-        <a href=""><i class="fa fa-vk" aria-hidden="true"></i>
-        <span class="vk">vk.com</span></a><br><br>
-        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i>
-        <span class="intagram">intagram.com</span></a><br><br>
-        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <span class="facebook">facebook.com</span></a><br><br>
+        <span class="email"><?php echo $user_db[0]['email'];?></span><br><br>
+        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+        <span class="twitter"><?php echo $user_db[0]['twitter'];?></span></a><br><br>
+        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i>
+        <span class="vk"><?php echo $user_db[0]['vk'];?></span></a><br><br>
+        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i>
+        <span class="instagram"><?php echo $user_db[0]['instagram'];?></span></a><br><br>
+        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+        <span class="facebook"><?php echo $user_db[0]['facebook'];?></span></a><br><br>
     </div>
     <div class="map">
-        <img src="img/map/map.jpg">
+        <img src="map/<?php echo $user_db[0]['map_representation'];?>">
     </div>
     </div>
 </section>
 <footer>
     <div class = "social_net">
-        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
     </div>
     <div class="general_iformation">
         &#169 design for the soul

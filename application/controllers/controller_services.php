@@ -8,13 +8,16 @@
 
 class Controller_services extends Controller
 {
-//    function __construct()
-//    {
-//        $this->view = new View();
-//    }
+    function __construct()
+    {
+        $this->model = new Model_services;
+        $this->view = new View();
+    }
 
     function action_index()
     {
-        $this->view->generate('services_view.php');
+        $user_db = $this->model->get_user_db();
+        $data = $this->model->get_data();
+        $this->view->generate('services_view.php', $user_db, $data);
     }
 }

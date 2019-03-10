@@ -44,46 +44,26 @@
 </div>
 <section>
     <div class="conteiner_for_album">
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/desert.jpg"> </a>
+        <?php
+        foreach ($data as $row) {
+        echo "<div class=\"album\">
+            <div class=\"preview_album\">
+                <a href=\"/album/open/".$row[id]."\">  <img src=\"img/portfolio/".$row[id]."/1.jpg\"> </a>
             </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
+            <div class=\"name_album\">
+                 <a href=\" / album / open /".$row[id]."\">" .$row[name]. "</a>
             </div>
-        </div>
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/mainBackgroundImage.jpg"> </a>
-            </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
-            </div>
-        </div>
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/desert.jpg"> </a>
-            </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
-            </div>
-        </div>
-        <div class="album">
-            <div class="preview_album">
-                <a href="/album">  <img src="img/mainBackgroundImage.jpg"> </a>
-            </div>
-            <div class="name_album">
-                <a href="/album"> New home </a>
-            </div>
-        </div>
+            </div>";
+        };
+        ?>
     </div>
 </section>
 <footer>
     <div class = "social_net">
-        <a href="<?php foreach($user_db as $row) {echo $row['twitter'];} ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href="<?php foreach($user_db as $row) {echo $row['vk'];} ?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href="<?php foreach($user_db as $row) {echo $row['instagram'];} ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="<?php foreach($user_db as $row) {echo $row['facebook'];} ?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
     </div>
     <div class="general_iformation">
         &#169 design for the soul

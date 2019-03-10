@@ -49,28 +49,25 @@
             <th>Description</th>
             <th class="td_cost">Cost</th>
         </tr>
-        <tr>
-            <td class="td_service" >Donec eget ex magna</td>
-            <td>
-                Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
-            </td>
-            <td class="td_cost">5000р</td>
-        </tr>
-        <tr>
-            <td class="td_service">Donec eget ex magna</td>
-            <td>
-                Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
-            </td>
-            <td class="td_cost">5000р</td>
-        </tr>
+        <?php
+        foreach ($data as $row) {
+            echo "<tr>
+            <td class=\"td_service\" >".$row['name']."</td>
+            <td>"
+             .$row['description'].
+            "</td>
+            <td class=\"td_cost\">".$row['cost']."р</td>
+        </tr>";
+        }
+        ?>
     </table>
 </section>
 <footer>
     <div class = "social_net">
-        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
     </div>
     <div class="general_iformation">
         &#169 design for the soul

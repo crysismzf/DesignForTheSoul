@@ -18,7 +18,8 @@ class Controller_portfolio extends Controller
     function action_index()
     {
         $user_db = $this->model->get_user_db();
-        $this->view->generate('portfolio_view.php', $user_db);
+        $data = $this->model->get_data();
+        $this->view->generate('portfolio_view.php', $user_db, $data);
 
     }
 }

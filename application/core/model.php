@@ -17,4 +17,7 @@ class Model
 
 
     }
+    public function  get_special_data ($data_name) {
+
+    }
 }
