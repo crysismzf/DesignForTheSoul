@@ -60,10 +60,10 @@
 </section>
 <footer>
     <div class = "social_net">
-        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <?php if($user_db[0]['twitter']!=NULL) {echo "<a href=\"".$user_db[0]['twitter']."\"><i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['vk']!=NULL) {echo "<a href=\"".$user_db[0]['vk']."\"><i class=\"fa fa-vk\" aria-hidden=\"true\"></i></a>";} ?>
+        <?php if($user_db[0]['instagram']!=NULL) {echo "<a href=\"".$user_db[0]['instagram']."\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['facebook']!=NULL) {echo "<a href=\"".$user_db[0]['facebook']."\"><i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i></a>";}?>
     </div>
     <div class="general_iformation">
         &#169 design for the soul

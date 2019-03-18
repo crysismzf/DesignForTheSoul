@@ -18,10 +18,12 @@ class Controller_album extends Controller
     {
         Route::ErrorPage404();
     }
-    function action_open ($data_name) {
+    function action_open ($data_name='error') {
         if (empty($data_name)) {
             Route::ErrorPage404();
-        } else {
+        } elseif(!is_numeric($data_name)) {
+            Route::ErrorPage404();
+        }else{
             $data = $this->model->get_special_data($data_name);
             if (!empty($data)) {
                 $user_db = $this->model->get_user_db();

@@ -43,31 +43,29 @@
     <div class="close_mod_win">CLOSE</div>
 </div>
 <section>
-    <table border="1">
-        <tr>
-            <th class="td_service">Service</th>
-            <th>Description</th>
-            <th class="td_cost">Cost</th>
-        </tr>
-        <?php
-        foreach ($data as $row) {
-            echo "<tr>
-            <td class=\"td_service\" >".$row['name']."</td>
-            <td>"
-             .$row['description'].
-            "</td>
-            <td class=\"td_cost\">".$row['cost']."р</td>
-        </tr>";
-        }
-        ?>
-    </table>
+
+    <?php
+    foreach ($data as $row) {
+        echo "<div class=\"elementRow\">
+        <div class=\"services_name\">
+            <strong>".$row['name']."</strong>
+        </div>
+        <div class=\"services_desc\">"
+       .$row['description'].
+        "</div>
+        <div class=\"services_cost\">"
+           .$row['cost'].
+        "р/м2</div>
+    </div>";
+    } ?>
+
 </section>
 <footer>
     <div class = "social_net">
-        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <?php if($user_db[0]['twitter']!=NULL) {echo "<a href=\"".$user_db[0]['twitter']."\"><i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['vk']!=NULL) {echo "<a href=\"".$user_db[0]['vk']."\"><i class=\"fa fa-vk\" aria-hidden=\"true\"></i></a>";} ?>
+        <?php if($user_db[0]['instagram']!=NULL) {echo "<a href=\"".$user_db[0]['instagram']."\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['facebook']!=NULL) {echo "<a href=\"".$user_db[0]['facebook']."\"><i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i></a>";}?>
     </div>
     <div class="general_iformation">
         &#169 design for the soul

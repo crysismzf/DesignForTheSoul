@@ -27,7 +27,7 @@ class Model_portfolio extends Model
             $db_user, $db_user_pass);
         $data = $pdo
             ->query("SELECT album.id, album.name 
-          FROM album;")
+          FROM album ORDER BY id DESC;")
             ->fetchAll();
         return $data;
     }

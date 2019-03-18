@@ -46,32 +46,32 @@
 <section>
     <div class="elementRow">
     <div class="contact">
-        <i class="fa fa-location-arrow" aria-hidden="true"></i>
-        <span class="address"> <?php echo $user_db[0]['address'];?> </span><br><br>
-        <i class="fa fa-phone" aria-hidden="true"></i>
-        <span class="tel"><?php echo $user_db[0]['phone'];?></span><br><br>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-        <span class="email"><?php echo $user_db[0]['email'];?></span><br><br>
-        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i>
-        <span class="twitter"><?php echo $user_db[0]['twitter'];?></span></a><br><br>
-        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i>
-        <span class="vk"><?php echo $user_db[0]['vk'];?></span></a><br><br>
-        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i>
-        <span class="instagram"><?php echo $user_db[0]['instagram'];?></span></a><br><br>
-        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i>
-        <span class="facebook"><?php echo $user_db[0]['facebook'];?></span></a><br><br>
+        <?php if($user_db[0]['address']!=NULL) {echo "<i class=\"fa fa-location-arrow\" aria-hidden=\"true\"></i>
+        <span class=\"address\">".$user_db[0]['address']."</span><br><br>";}?>
+        <?php if($user_db[0]['phone']!=NULL) {echo "<i class=\"fa fa-phone\" aria-hidden=\"true\"></i>
+        <span class=\"tel\">".$user_db[0]['phone']."</span><br><br>";}?>
+        <?php if($user_db[0]['email']!=NULL) {echo "<i class=\"fa fa-envelope\" aria-hidden=\"true\"></i>
+        <span class=\"email\">".$user_db[0]['email']."</span><br><br>";} ?>
+        <?php if($user_db[0]['twitter']!=NULL) {echo "<a href=\"".$user_db[0]['twitter']."\"><i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i>
+        <span class=\"twitter\">".$user_db[0]['twitter']."</span></a><br><br>";} ?>
+        <?php if($user_db[0]['vk']!=NULL) {echo "<a href=\"".$user_db[0]['vk']."\"><i class=\"fa fa-vk\" aria-hidden=\"true\"></i>
+        <span class=\"vk\">".$user_db[0]['vk']."</span></a><br><br>";} ?>
+        <?php if($user_db[0]['instagram']!=NULL) {echo "<a href=\"".$user_db[0]['instagram']."\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>
+        <span class=\"instagram\">".$user_db[0]['instagram']."</span></a><br><br>";}?>
+        <?php if($user_db[0]['facebook']!=NULL) {echo "<a href=\"".$user_db[0]['facebook']."\"><i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i>
+        <span class=\"facebook\">".$user_db[0]['facebook']."</span></a><br><br>";} ?>
     </div>
-    <div class="map">
-        <img src="map/<?php echo $user_db[0]['map_representation'];?>">
-    </div>
-    </div>
+        <?php if($user_db[0]['address']!=NULL) {echo "<div class=\"map\">
+        <img src=\"map//".$user_db[0]['map_representation']."\">
+    </div>";}?>
+   </div>
 </section>
 <footer>
     <div class = "social_net">
-        <a href="<?php echo $user_db[0]['twitter'];?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['vk'];?>"><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['instagram'];?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="<?php echo $user_db[0]['facebook'];?>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <?php if($user_db[0]['twitter']!=NULL) {echo "<a href=\"".$user_db[0]['twitter']."\"><i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['vk']!=NULL) {echo "<a href=\"".$user_db[0]['vk']."\"><i class=\"fa fa-vk\" aria-hidden=\"true\"></i></a>";} ?>
+        <?php if($user_db[0]['instagram']!=NULL) {echo "<a href=\"".$user_db[0]['instagram']."\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['facebook']!=NULL) {echo "<a href=\"".$user_db[0]['facebook']."\"><i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i></a>";}?>
     </div>
     <div class="general_iformation">
         &#169 design for the soul

@@ -7,130 +7,152 @@ a {
     text-decoration: none;
     color: black;
 }
-/*Размер текста нужно поменять под ширину экрана*/
+/*Размер шрифта меняется под ширину экрана*/
 body {
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
     color: black;
-    height: 100%;
 }
 /*размеры хэда завитят от ширины экрана*/
 /*Этот хэдер только для главной страницы*/
 #header_main_page {
+    position: relative;
+    display: block;
     width: 100%;
     height: 900px;
     margin: 0 auto;
-    display: block;
-    position: relative;
 }
 
 /*Хэдер для других страниц*/
 header {
+    position: relative;
+    display: block;
     width: 100%;
     height: 300px;
     margin: 0 auto;
-    display: block;
-    position: relative;
 }
 
 .layer-top{
+    position: fixed;
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     background: rgba(145, 140, 140, 0.5);
     z-index: 1;
 }
 
 #nav_main_page, nav {
-    margin-top: 3%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     position: relative;
-    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3%;
     background: grey;
+    z-index: 2;
     opacity: 0.5;
 }
 
 nav {
     background: rgba(145, 140, 140,0.5);
-    opacity: 1;
-
 }
 
 #nav_main_page:hover {
+    -webkit-transition: 1s;
     transition: 1s;
     opacity: 1;
 }
 
 nav:hover{
+    -webkit-transition: 1s;
     transition: 1s;
     background: grey;
 }
 
 .menu_row {
-    font-size: 1.5em;
     display: block;
     height: 100%;
+    font-size: 1.5em;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 /*стили для меню открываемое с телефона*/
 .menu_for_phone {
-    font-size: 3em;
     display: none;
+    font-size: 3em;
 }
 .modal_win_menu {
+    position: fixed;
     width: 100%;
     height: 100%;
-    position: fixed;
-    font-size: 2em;
-    top: 0px;
-    left: 0px;
-    background: rgba(145, 140, 140, 0.9);
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    font-size: 2em;
+    top: 0;
+    left: 0;
+    background: rgba(145, 140, 140, 0.9);
     z-index: 4;
 }
+
 .modal_win_menu a {
     margin: 2%;
 }
+
 .close_mod_win {
     margin: 3%;
     padding: 1%;
     background: grey;
     color: white;
+    border: black 1px solid;
 }
 /*размеры подложки зависят от ширины экрана*/
 .background_for_header {
+    position: fixed;
     width: 100%;
     height: 100%;
     max-height: 1000px;
     min-height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    left: 0;
     background: url("../img/mainBackgroundImage.jpg");
     background-size: cover;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 0;
-    display: flex;
     padding: auto;
-
+    z-index: 0;
 }
+
 .text_for_header {
+    position: relative;
     width: 100%;
     height: 100%;
     min-height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    position: relative;
     font-family: 'Dancing Script', cursive;
     text-align: center;
     font-size: 4em;
@@ -140,42 +162,60 @@ nav:hover{
 }
 
 section {
-    width: 100%;
-    /*Перепроверить высоту*/
-    min-height: 500px;
-    font-size: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 1px black;
     position: relative;
+    width: 100%;
+    min-height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     background: white;
+    font-size: 1.5em;
+    border: 1px black;
     z-index: 2;
-
 }
+
 /*Блоки внизу*/
 .about_disainer, .services  {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-top: 2%;
     margin-bottom: 2%;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
     border: 2px solid grey;
 }
 
 .foto_by_disainer {
-    padding: 2%;
     display: block;
     width: 40%;
+    padding: 2%;
     text-align: center;
 }
+
 .icon_for_service {
-    padding: 2%;
     display: block;
     width: 20%;
+    padding: 2%;
     text-align: center;
 }
 
@@ -183,67 +223,100 @@ section {
 img {
     width: 100%;
     height: auto;
-    max-height: 500px;
+    /*max-height: 300px;*/
 }
 
 .text_about_disainer {
-    text-align: justify;
-    padding: 2%;
-    display: block;
     width: 60%;
-}
-.text_about_service {
+    display: block;
     text-align: justify;
     padding: 2%;
-    display: block;
+}
+
+.text_about_service {
     width: 80%;
+    display: block;
+    text-align: justify;
+    padding: 2%;
 }
 
 .services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 .services img {
     width: 50%;
 }
 .elementRow {
-    display: flex;
-    flex-direction: row;
+    position: relative;
     height: 50%;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    position: relative;
 }
 
 /*Далее идут стили для портфолио*/
 .conteiner_for_album {
     margin: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     z-index: 2;
 }
 
 .album, .foto_portfolio {
-    margin: 2.5% 4% 2.5% 4%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: auto;
-    max-width: 40%;
-    /*min-width: 30%;*/
+	width: 100%;
+    max-width: 40%;	
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 2.5% 4% 2.5% 4%;
     z-index: 2;
 }
 
 .preview_album {
+	width: 100%;
     text-align: justify;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .preview_album :hover {
+    -webkit-transition: 1s;
     transition: 1s;
+    -webkit-filter: brightness(80%);
     filter: brightness(80%);
 }
 
@@ -257,7 +330,7 @@ img {
 }
 /*Далее идут стили для страницы с альбомом*/
 aside {
-    margin: 2% 2% 0% 2%;
+    margin: 2% 2% 0 2%;
     font-size: 1.2em;
     text-align: justify;
 }
@@ -266,32 +339,38 @@ aside {
 }
 
 .background_for_foto {
+    position: fixed;
     width: 100%;
     height: 100%;
-    position: fixed;
-    font-size: 3em;
-    /*top: 0px;*/
-    /*left: 0px;*/
-    background: rgba(145, 140, 140, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    font-size: 3em;
+    background: rgba(145, 140, 140, 0.8);
     z-index: 4;
 }
 
 .max_foto {
     display: block;
-    margin: auto;
-    /*justify-content: space-between;*/
     max-width: 100%;
-    max-height: 100%;
+    max-height: 85%;
+    margin: auto;
     z-index: 5;
 }
 
 .max_foto img {
     max-height: 100%;
-
+    border: 2px solid black;
 }
 
 .turn_back, .turn_forward {
@@ -302,53 +381,91 @@ aside {
 }
 
 /*Далее идут стили для страницы услуг*/
-table {
-    margin: 2%;
-    border: 1px;
-    padding: 20px;
+
+
+.services_name {
+    min-width: 20%;
+    display: block;
+    padding: 2%;
+    text-align: center;
 }
 
-td {
+.services_desc {
+    width: 60%;
+    display: block;
+    padding: 2%;
     text-align: justify;
-    padding: 10px;
- }
-
-.td_service {
+}
+.services_cost {
     width: 20%;
+    display: block;
+    padding: 2%;
     text-align: center;
 }
 
-.td_cost {
-    width: 10%;
-    text-align: center;
-}
 
 /*Ниже для стили для страницы контакты*/
 .contact {
     display: inline-block;
-    margin: 2% 2% 0% 2%;
+    margin: 2% 2% 0 2%;
 }
 .map {
     margin: 2% 2% 2% 2%;
 }
+.map img {
+    border: 2px solid grey;
+}
 
 footer {
-    background-color: rgba(145, 140, 140);
     position: relative;
     width: 100%;
-    /*height: 100px;*/
+    background-color: rgba(145, 140, 140, 1);
     z-index: 2;
 }
+
 .social_net {
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
     justify-content: left;
     word-spacing: 20px;
     padding: 10px;
     font-size: 2em;
 }
+
 .general_iformation {
     text-align: center;
     padding: 10px;
 }
+
+.error_404 {
+    position: absolute;
+    padding: 10%;
+}
+/*Стили для страницы авторизации*/
+.log_in {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    font-size: 16px;
+}
+
+.log_in_items {
+    padding: 2%;
+    display: block;
+    border: grey 1px solid;
+}
+
+
 @media (max-width: 1800px){
 body {
     font-size: 12px;
@@ -367,20 +484,12 @@ body {
         display: block;
         max-height: 100%;
         max-width: 100%;
-        /*margin-bottom: 10%;*/
-        /*width: 60%;*/
-        /*height: 80%;*/
-        /*max-width: 60%;*/
-        /*max-height: 80%;*/
     }
     .max_foto img {
         max-width: 900px;
         max-height: 600px;
-        /*max-height: 60%;*/
     }
     .turn_back, .turn_forward {
-        /*display: block;*/
-        /*max-width: 20%;*/
         text-align: center;
         z-index: 5;
     }
@@ -408,24 +517,29 @@ body {
         display: block;
         max-height: 100%;
         max-width: 100%;
-        /*margin-bottom: 10%;*/
-        /*width: 60%;*/
-        /*height: 80%;*/
-        /*max-width: 60%;*/
-        /*max-height: 80%;*/
     }
     .max_foto img {
        max-width: 900px;
         max-height: 600px;
-        /*max-height: 60%;*/
     }
     .turn_back, .turn_forward {
-        /*display: block;*/
-        /*max-width: 20%;*/
         text-align: center;
         z-index: 5;
     }
 
+
+}
+
+@media (max-width: 1100px) {
+    #header_main_page {
+        height: 800px;
+    }
+    header {
+        height: 200px;
+    }
+    section {
+        min-height: 900px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -448,21 +562,20 @@ body {
         max-height: 1000px;
         min-height: 300px;
     }
-    .text_for_header {}
     section {
-        min-height: 700px;
+        min-height: 900px;
     }
     .elementRow {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
-    /*.max_foto {*/
-        /*display: flex;*/
-        /*justify-content: space-between;*/
-        /*max-width: 80%;*/
-        /*max-height: 80%;*/
-    /*}*/
-
+    section {
+        min-height: 900px;
+    }
 }
+
 @media (max-width: 810px) {
     #header_main_page {
         height: 500px;
@@ -474,6 +587,10 @@ body {
         height: 70%;
         max-height: 1000px;
         min-height: 300px;
+    }
+    .max_foto img {
+        max-width: 900px;
+        max-height: 400px;
     }
 
     section {
@@ -495,6 +612,8 @@ body {
         font-size: 2em;
     }
     #nav_main_page, nav {
+        -webkit-box-pack: right;
+        -ms-flex-pack: right;
         justify-content: right;
 
     }
@@ -507,12 +626,18 @@ body {
         padding-left: 5%;
     }
     .about_disainer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .foto_by_disainer  {
         width: 80%;
     }
     .conteiner_for_album {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .album {
@@ -533,19 +658,25 @@ body {
         height: 300px;
     }
     header {
-        height: 250px;
+        height: 200px;
     }
     h1 {
         font-size: 1.5em;
     }
     .background_for_header {
-        height: 50%;
+        height: 60%;
         max-height: 1000px;
         min-height: 300px;
     }
     #nav_main_page, nav {
+        -webkit-box-pack: right;
+        -ms-flex-pack: right;
         justify-content: right;
 
+    }
+    .text_for_header {
+        min-height: 200px;
+        margin-top: 0;
     }
     .menu_row {
         display: none;
@@ -555,12 +686,18 @@ body {
         padding-right: 5%;
     }
     .about_disainer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .foto_by_disainer  {
         width: 80%;
     }
     .conteiner_for_album {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .album {
@@ -573,7 +710,69 @@ body {
         min-height: 400px;
     }
 }
+
 @media (max-width: 400px) {
+    body {
+        font-size: 8px;
+    }
+    #header_main_page {
+        height: 260px;
+    }
+    header {
+        height: 200px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .background_for_header {
+        height: 40%;
+        /*max-height: 1000px;*/
+        /*min-height: 300px;*/
+    }
+    #nav_main_page, nav {
+        -webkit-box-pack: right;
+        -ms-flex-pack: right;
+        justify-content: right;
+
+    }
+
+    .text_for_header {
+        min-height: 200px;
+        margin-top: 0;
+    }
+    .menu_row {
+        display: none;
+    }
+    .menu_for_phone {
+        display: block;
+        padding-right: 5%;
+    }
+    .about_disainer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .foto_by_disainer  {
+        width: 80%;
+    }
+    .conteiner_for_album {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .album {
+        max-width: 90%;
+    }
+    .foto_portfolio {
+        max-width: 90%;
+    }
+    section {
+        min-height: 400px;
+    }
+}
+@media (max-width: 350px) {
     body {
         font-size: 6px;
     }
@@ -581,7 +780,13 @@ body {
         height: 250px;
     }
     header {
-        height: 250px;
+        height: 150px;
+        display: block;
+    }
+
+    .text_for_header {
+        min-height: 220px;
+        margin-top: 0;
     }
     h1 {
         font-size: 1.5em;
@@ -591,7 +796,6 @@ body {
         max-height: 1000px;
         min-height: 300px;
     }
-    /*.text_for_header {*/
-        /*height: 200px;*/
-    /*}*/
+
 }
+

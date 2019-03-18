@@ -47,56 +47,34 @@
 <section>
     <div class="about_disainer">
         <div  class="foto_by_disainer">
-            <img src="img/foto_disainer.jpg">
+            <img src="img/<?php echo $user_db[0]['foto_user'];?>">
         </div>
         <div class="text_about_service">
-            <h3>Hello, this is a design studio "design for the soul"</h3>
-            Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+              <?php
+            echo $user_db[0]['about'];
+              ?>
         </div>
     </div>
-    <div class="services">
-        <div class="elementRow">
-            <div  class="icon_for_service">
-                <img src="img/service/service1.png">
+    <div class="services"><?php
+        foreach ($data as $row) {
+            echo "<div class=\"elementRow\">
+            <div  class=\"icon_for_service\">
+                <img src=\"img/service/".$row['id'].".".$row['icon_extension']."\">
             </div>
-            <div class="text_about_service">
-                <strong> Abusus non tollit usum. Accepto damno.</strong> Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.
-            </div>
-        </div>
-
-        <div class="elementRow">
-            <div  class="icon_for_service">
-                <img src="img/service/service2.png">
-            </div>
-            <div class="text_about_service">
-                <strong> Casum sentit dominus. Caveat emptor.</strong> Ceteris paribus. Condicio sine qua non. Contra factum non datur argumentum. Conventio facit legam. Corpus delicti. Crescente malitia crescere debet et poena. Cuius commodum, eius debet esse incommodum. Cuius commodum, eius periculum
-            </div>
-        </div>
-
-        <div class="elementRow">
-            <div  class="icon_for_service">
-                <img src="img/service/service3.png">
-            </div>
-            <div class="text_about_service">
-                <strong> Abusus non tollit usum. Accepto damno.</strong> Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.
-            </div>
-        </div>
-
-        <div class="elementRow">
-            <div  class="icon_for_service">
-                <img src="img/service/service4.png">
-            </div>
-            <div class="text_about_service">
-                <strong> Abusus non tollit usum. Accepto damno.</strong> Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.
-            </div>
-        </div>
+            <div class=\"text_about_service\">"
+            .$row['description'].
+            "</div>
+                </div>";
+        }
+        ?>
+    </div>
 </section>
 <footer>
     <div class = "social_net">
-        <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <?php if($user_db[0]['twitter']!=NULL) {echo "<a href=\"".$user_db[0]['twitter']."\"><i class=\"fa fa-twitter-square\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['vk']!=NULL) {echo "<a href=\"".$user_db[0]['vk']."\"><i class=\"fa fa-vk\" aria-hidden=\"true\"></i></a>";} ?>
+        <?php if($user_db[0]['instagram']!=NULL) {echo "<a href=\"".$user_db[0]['instagram']."\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a>";}?>
+        <?php if($user_db[0]['facebook']!=NULL) {echo "<a href=\"".$user_db[0]['facebook']."\"><i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i></a>";}?>
     </div>
     <div class="general_iformation">
         &#169 design for the soul
